@@ -33,9 +33,11 @@ section { border-top:1px solid var(--line); padding:80px 0; }
 h2 { font-family: "Cormorant Garamond", serif; font-size:clamp(34px,5vw,64px); line-height:1; letter-spacing:-.045em; margin:0; font-weight:600; }
 .work {     display: grid; grid-template-columns: repeat(2,1fr); gap:12px;}
 
-.work card:nth-child(3n+1){
+.work .card:nth-child(3n+1){
     grid-column: 1/ -1;
 }
+
+    
 .card { min-height:310px; width:100%; border:1px solid var(--line); padding:28px; display:flex; flex-direction:column; justify-content:space-between; background:#fff; transition:transform .2s ease; }
 .card:hover { transform:translateY(-4px); text-decoration:none; }
 .card h3 { font-size:30px; letter-spacing:-.03em; margin:0 0 10px; }
@@ -79,8 +81,7 @@ footer { display:block; }
 
 <section id="work">
 <div class="section-head">
-<div class="eyebrow">Selected work</div>
-<h2>Portfolio</h2>
+<div class="eyebrow">Over 10 years working with leading eCommerce players</div>
 </div>
 <div class="work">
 <a class="card card1">
