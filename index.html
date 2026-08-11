@@ -31,7 +31,9 @@ section { border-top:1px solid var(--line); padding:80px 0; }
 .section-head { display:grid; grid-template-columns:1fr 2fr; gap:40px; margin-bottom:42px; }
 .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); }
 h2 { font-family: "Cormorant Garamond", serif; font-size:clamp(34px,5vw,64px); line-height:1; letter-spacing:-.045em; margin:0; font-weight:600; }
-.work { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+.work { display:flex; gap:16px; }
+.card1 {width:100%;}
+.card2 {width:50%;}
 .card { min-height:310px; border:1px solid var(--line); padding:28px; display:flex; flex-direction:column; justify-content:space-between; background:#fff; transition:transform .2s ease; }
 .card:hover { transform:translateY(-4px); text-decoration:none; }
 .card h3 { font-size:30px; letter-spacing:-.03em; margin:0 0 10px; }
@@ -79,19 +81,19 @@ footer { display:block; }
 <h2>Portfolio</h2>
 </div>
 <div class="work">
-<a class="card">
+<a class="card card1">
 <div><h3>MySephora</h3><p>Improving the loyalty experience through product thinking, UX and personalisation.</p></div>
 <span class="arrow">↗</span>
 </a>
-<a class="card">
+<a class="card card2">
 <div><h3>CRO & Experimentation</h3><p>Using research, analytics and experimentation to identify opportunities and improve conversion.</p></div>
 <span class="arrow">↗</span>
 </a>
-<a class="card">
+<a class="card card2">
 <div><h3>Product Experience</h3><p>A placeholder for another product, UX or service-design case study.</p></div>
 <span class="arrow">↗</span>
 </a>
-<a class="card">
+<a class="card card1">
 <div><h3>Coming soon</h3><p>More work and case studies will be added here.</p></div>
 <span class="arrow">↗</span>
 </a>
