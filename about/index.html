@@ -38,53 +38,7 @@ h2 { font-family: "Cormorant Garamond", serif; font-size:42px; line-height:1; le
     grid-column: 1/ -1;
 }
 
-    
-.card { min-height:310px; width:100%; border:1px solid var(--line); padding:28px; display:flex; flex-direction:column; justify-content:space-between; background:#fff; transition:transform .2s ease; }
-.card:hover { transform:translateY(-4px); text-decoration:none; }
-.card h3 { font-size:30px; letter-spacing:-.03em; margin:0 0 10px; }
-.card p { color:var(--muted); max-width:430px; margin:0; }
-.arrow { font-size:24px; align-self:flex-end; }
-.timeline { border-top:1px solid var(--line); }
-.role { display:grid; grid-template-columns:1fr 2fr; gap:40px; padding:28px 0; border-bottom:1px solid var(--line); }
-.role .dates { color:var(--muted); }
-.role h3 { margin:0; font-size:24px; }
-.role p { margin:5px 0 0; color:var(--muted); }
-.about { max-width:780px; font-size:clamp(22px,3vw,38px); line-height:1.2; letter-spacing:-.025em; }
-footer { border-top:1px solid var(--line); padding:30px 0 60px; display:flex; justify-content:space-between; color:var(--muted); font-size:14px; }
-@media (max-width:700px) {
-.wrap { width:min(calc(100% - 32px), var(--max)); }
-nav .links { gap:12px; }
-.hero { min-height:70vh; padding:70px 0 60px; }
-.section-head, .role { grid-template-columns:1fr; gap:18px; }
-.work { grid-template-columns:1fr; }
-section { padding:60px 0; }
-footer { display:block; }
-
-  about-life {
-padding: 120px 40px;
-}
-
-.about-intro {
-max-width: 600px;
-margin-bottom: 56px;
-}
-
-.eyebrow {
-margin-bottom: 12px;
-font-size: 12px;
-letter-spacing: .12em;
-text-transform: uppercase;
-}
-
-.about-intro h2 {
-margin: 0;
-font-size: clamp(36px, 4vw, 64px);
-line-height: .95;
-letter-spacing: -.04em;
-}
-
-
-/* POLAROID GRID */
+    /* POLAROID GRID */
 
 .polaroid-grid {
 display: grid;
@@ -130,6 +84,52 @@ font-size: 13px;
 line-height: 1.4;
 color: var(--muted);
 }
+.card { min-height:310px; width:100%; border:1px solid var(--line); padding:28px; display:flex; flex-direction:column; justify-content:space-between; background:#fff; transition:transform .2s ease; }
+.card:hover { transform:translateY(-4px); text-decoration:none; }
+.card h3 { font-size:30px; letter-spacing:-.03em; margin:0 0 10px; }
+.card p { color:var(--muted); max-width:430px; margin:0; }
+.arrow { font-size:24px; align-self:flex-end; }
+.timeline { border-top:1px solid var(--line); }
+.role { display:grid; grid-template-columns:1fr 2fr; gap:40px; padding:28px 0; border-bottom:1px solid var(--line); }
+.role .dates { color:var(--muted); }
+.role h3 { margin:0; font-size:24px; }
+.role p { margin:5px 0 0; color:var(--muted); }
+.about { max-width:780px; font-size:clamp(22px,3vw,38px); line-height:1.2; letter-spacing:-.025em; }
+footer { border-top:1px solid var(--line); padding:30px 0 60px; display:flex; justify-content:space-between; color:var(--muted); font-size:14px; }
+@media (max-width:700px) {
+.wrap { width:min(calc(100% - 32px), var(--max)); }
+nav .links { gap:12px; }
+.hero { min-height:70vh; padding:70px 0 60px; }
+.section-head, .role { grid-template-columns:1fr; gap:18px; }
+.work { grid-template-columns:1fr; }
+section { padding:60px 0; }
+footer { display:block; }
+
+  about-life {
+padding: 120px 40px;
+}
+
+.about-intro {
+max-width: 600px;
+margin-bottom: 56px;
+}
+
+.eyebrow {
+margin-bottom: 12px;
+font-size: 12px;
+letter-spacing: .12em;
+text-transform: uppercase;
+}
+
+.about-intro h2 {
+margin: 0;
+font-size: clamp(36px, 4vw, 64px);
+line-height: .95;
+letter-spacing: -.04em;
+}
+
+
+
 }
 </style>
 </head>
