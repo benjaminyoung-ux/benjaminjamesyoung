@@ -32,6 +32,195 @@ section { border-top:1px solid var(--line); padding:80px 0; }
     .section-head-intro { display:grid; grid-template-columns:1fr; gap:40px; margin-bottom:42px; }
 .eyebrow { font-size:12px; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); }
 h2 { font-family: "Cormorant Garamond", serif; font-size:42px; line-height:1; letter-spacing:-.045em; margin:0; font-weight:600; }
+    /* =========================================
+   PHOTO GRID
+========================================= */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 16px;
+  align-items: start;
+}
+
+
+/* =========================================
+   PHOTO ITEM
+========================================= */
+
+.photo-item {
+  grid-column: span 2;
+  margin: 0;
+  min-width: 0;
+}
+
+
+/* Larger feature images */
+
+.photo-item:nth-child(3n + 1) {
+  grid-column: span 4;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.photo-image {
+  width: 100%;
+  overflow: hidden;
+  background: var(--surface);
+}
+
+.photo-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .5s ease;
+}
+
+
+/* Subtle interaction */
+
+.photo-item:hover .photo-image img {
+  transform: scale(1.02);
+}
+
+
+/* =========================================
+   CAPTION
+========================================= */
+
+.photo-item--caption {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+
+/*
+   The image takes 7/8
+   The caption takes 1/8
+*/
+
+.photo-item--caption .photo-image {
+  grid-column: 1;
+}
+
+.photo-item--caption figcaption {
+  grid-column: 2;
+}
+
+
+/* Caption typography */
+
+.photo-number {
+  display: block;
+  margin-bottom: 12px;
+
+  font-size: 10px;
+  letter-spacing: .1em;
+  color: var(--muted);
+}
+
+.photo-item--caption figcaption p {
+  margin: 0;
+
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+
+/* =========================================
+   VARIED IMAGE PROPORTIONS
+========================================= */
+
+.photo-item:nth-child(2) .photo-image {
+  aspect-ratio: 4 / 5;
+}
+
+.photo-item:nth-child(3) .photo-image {
+  aspect-ratio: 3 / 4;
+}
+
+.photo-item:nth-child(4) .photo-image {
+  aspect-ratio: 4 / 3;
+}
+
+.photo-item:nth-child(5) .photo-image {
+  aspect-ratio: 1 / 1;
+}
+
+.photo-item:nth-child(6) .photo-image {
+  aspect-ratio: 3 / 4;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .photo-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .photo-item {
+    grid-column: span 2;
+  }
+
+  .photo-item:nth-child(3n + 1) {
+    grid-column: span 4;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .photo-item,
+  .photo-item:nth-child(3n + 1) {
+    grid-column: span 2;
+  }
+
+
+  /*
+     On mobile the caption moves underneath
+     the image rather than sitting beside it.
+  */
+
+  .photo-item--caption {
+    display: block;
+  }
+
+  .photo-item--caption figcaption {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .photo-number {
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .photo-item--caption figcaption p {
+    max-width: 250px;
+  }
+
+}
 .work {     display: grid; grid-template-columns: repeat(2,1fr); gap:12px;}
 
 .work .card:nth-child(3n+1){
