@@ -284,6 +284,7 @@ h2 {
   margin-right: 20px;
 }
 
+ .about-intro.beyond {margin-bottom:40px;}
 
 /* =========================================
    FOOTER
@@ -530,6 +531,8 @@ footer {
     max-width: 600px;
     margin-bottom: 56px;
   }
+
+ 
 
   .about-intro h2 {
     margin: 0;
